@@ -23,7 +23,7 @@ export function slugify(text: string): string {
 }
 
 export function getImageUrl(path: string | null): string {
-  if (!path) return "/images/products/placeholder.jpg";
+  if (!path) return "/images/products/placeholder.svg";
   if (path.startsWith("http")) return path;
   return path;
 }

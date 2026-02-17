@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { formatPrice } from "@/lib/utils";
 import { Package } from "lucide-react";
+import type { Order } from "@/types";
 
 export const metadata: Metadata = {
   title: "My Orders",
@@ -57,7 +58,7 @@ export default async function OrdersPage() {
           </div>
         ) : (
           <div className="space-y-4">
-            {orders.map((order) => (
+            {orders.map((order: Order) => (
               <Link
                 key={order.id}
                 href={`/account/orders/${order.id}`}
